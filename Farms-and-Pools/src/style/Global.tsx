@@ -21,11 +21,11 @@ const GlobalStyle = createGlobalStyle`
   src: url(./fonts/Sofia_Pro_Regular.otf);
 }
 @font-face {
-  font-family: Sofia_Pro_Semi_Bold;
-  src: url(./fonts/Sofia_Pro_Semi_Bold.otf);
+  font-family: Poppins;
+  src: url(./fonts/Poppins.otf);
 }
 * {
-  font-family: Sofia_Pro_Regular;
+  font-family: Poppins;
 }
   body {
     background-color: ${({ theme }) => theme.colors.background};
@@ -44,7 +44,7 @@ const GlobalStyle = createGlobalStyle`
   // }
   .hvd_comic_serif {
     // font-family: HVD_Comic_Serif_Pro;
-    font-family: Sofia_Pro_Semi_Bold !important;
+    font-family: Poppins !important;
     font-weight: 400;
   }
   .dash_subheading {
@@ -59,22 +59,22 @@ const GlobalStyle = createGlobalStyle`
   }
   .menulink  div {
     font-size: 18px;
-    font-family: Sofia_Pro_Semi_Bold !important;
+    font-family: Poppins !important;
     text-transform: uppercase;
   }
   div[role="button"] a {
     // text-transform: uppercase;
     font-size: 15px;
-    font-family: Sofia_Pro_Semi_Bold !important;
+    font-family: Poppins !important;
   }
   button div {
-    font-family: Sofia_Pro_Semi_Bold !important;
+    font-family: Poppins !important;
     font-weight: 400 !important;
     font-size: 18px !important;
     // color: #ccc !important;
   }
   button {
-    font-family: Sofia_Pro_Semi_Bold !important;
+    font-family: Poppins !important;
     font-weight: 400 !important;
   }
   .dash_heading_1
@@ -113,8 +113,8 @@ const GlobalStyle = createGlobalStyle`
 }
 .menulink img
 {
-  max-width:18px !important;
-  min-width:18px !important;
+  max-width:40px !important;
+  min-width:40px !important;
 }
 .menulink svg
 {
@@ -132,6 +132,10 @@ const GlobalStyle = createGlobalStyle`
   color: #868585;
 font-size: 20px;
 font-weight: 700;
+font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;
 }
 .card_small
 {
@@ -149,8 +153,8 @@ color:#868585;
   background-color:transparent !important;
 border: 1px solid #515151 !important;
 box-shadow: inset 0px 0px 0px rgba(14,14,44,0.4);
-border-radius:5px !important;
-color:#fff !important;
+border-radius:8px !important;
+color: #666666 !important;
 }
 // button[aria-label="Close the dialog"]
 // {
@@ -170,7 +174,7 @@ color:#fff !important;
 border: 1px solid #515151  !important;
 color: #000 !important;
 box-shadow: inset 0px 0px 0px rgba(14,14,44,0.4);
-border-radius:5px !important;
+border-radius:8px !important;
 }
 button
 {
@@ -212,7 +216,7 @@ nav button[aria-label="Toggle menu"] svg
 }
 .card_radius,.white_box
 {
-  border-radius:10px !important;
+  border-radius:20px !important;
 }
 .lable_color Label,.lable_color div,.label_color
 {
@@ -281,8 +285,8 @@ color:#000 !important;
 }
 .card_radius button.harvest_btn_rad,.bor_rad div .harvest_btn_rad
 {
-  border-radius: 5px !important;
-  max-height: 30px;
+  border-radius: 8px !important;
+  //max-height: 30px;
 }
 .px-0{
   padding-left: 0px !important;
@@ -313,11 +317,12 @@ color:#000 !important;
 }
 body
 {
-  background-image: url('/images/egg/bg.png');
+  //background-image: url('/images/egg/bg.png');
   background-position: bottom;
   background-repeat:no-repeat;
   background-attachment:fixed;
   background-size:cover;
+  background-color: black;
   // background-size:100% 400px;
 }
 .text_big_val,.text_big_val div
@@ -360,7 +365,7 @@ fill:#868585 !important;
 }
 .card_radius
 {
-  border: 1px solid #49484829;
+  border: 1px solid #ffffff29;
 }
 a.btn_not_found
 {
@@ -481,7 +486,7 @@ height:100%;
 .card_radius.min_h_unset
 {
   min-height:unset !important;
-  height:100% !important;
+  height:91% !important;
 }
 .card_totla
 {
@@ -511,6 +516,11 @@ margin-bottom:20px;
 {
   margin-bottom:15px !important;
 }
+.flex_tot.mb-35
+{
+  margin-bottom:35px !important;
+}
+
 .mb-0
 {
   margin-bottom:0px !important;
@@ -602,7 +612,7 @@ padding-left:10px !important;
 }
 .card_totla
 {
-  height:100%;
+  height:92%;
 }
 .mb-10
 {
@@ -614,7 +624,9 @@ padding-left:10px !important;
 }
 .card_totla.vision_card_panel
 {
-  margin-bottom:10px !important;
+  //margin-bottom:10px !important;
+  margin-bottom:0px !important;
+  background-color: transparent;
 }
 .flex_to_new .float_right>div
 {
@@ -774,8 +786,12 @@ z-index:3;
 }
 .btn_new_padding
 {
-padding:5px 10px !important;
+//padding:5px 10px !important;
 cursor:pointer !important;
+width: max-content;
+    height: 45px;
+    padding: 0 24px;
+    font-size: 16px;
 }
 .hr_grey
 {
@@ -791,7 +807,7 @@ cursor:pointer !important;
 {
   .card_heigh_fifty
   {
-    height:51%;
+    height: 39%;
   }
 }
 
@@ -1068,6 +1084,49 @@ margin-top:30px;
 {
   margin-top:-20px;
 }
+
+.myplusebutton {
+    width: 110px;
+}
+.farmearning{
+  justify-content:space-around !important;
+}
+.mainfarmearning{
+  -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 14px;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+.emissionsgrayblock{
+  color:#666666;
+  font-size: 18px;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.mb-35{
+  margin-bottom:35px !important;
+}
+.mb-26{
+  margin-bottom:26px !important;
+}
+.mt-34{
+  margin-top:34px !important;
+}
+
+.mt-18 {
+    margin-top: 18px !important;
+}
+
 `
 
 export default GlobalStyle

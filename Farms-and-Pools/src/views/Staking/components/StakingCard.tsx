@@ -304,7 +304,7 @@ const [onPresentDeposit] = useModal(<DepositModal max={new BigNumber(amount)} on
 
     </div>
     <div>
-    <button onClick={onPresentDeposit} className="btn_yellow btn_new_padding" type="button">
+    <button onClick={onPresentDeposit} className="btn_yellow btn_new_padding myplusebutton" type="button">
     <AddIcon color="primary" />
     </button>
    

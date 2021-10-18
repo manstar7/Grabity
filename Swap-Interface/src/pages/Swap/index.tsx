@@ -40,6 +40,42 @@ const Swap = () => {
   const loadedUrlParams = useDefaultsFromURLSearch()
   const TranslateString = useI18n()
 
+  const tradeDropdownClass = () => {
+    
+    const dropdownDiv = document.getElementsByClassName('tradeDropdown')
+    const dropdownEleParent = dropdownDiv[0].parentNode;
+    const subMenu = dropdownEleParent?.children[1];
+
+    
+
+    const menuItems = subMenu?.children;
+
+    if(menuItems) {
+      for(let i=0;i < menuItems?.length;i++) {
+        const aHref = menuItems[i].children;
+        const url = aHref[0].getAttribute('href');
+
+        if(url?.includes('#/swap')) {
+          menuItems[i].classList.remove('epsdBM');
+          menuItems[i].classList.add('gbUOUm');
+        } else {
+          menuItems[i].classList.remove('ifKCJQ');
+          menuItems[i].classList.add('epsdBM');
+        }        
+      }
+    }
+    if(subMenu?.classList.contains('iSqbJu')) {
+      const dropdown: HTMLElement = dropdownDiv[0] as HTMLElement;
+      dropdown.click();
+    }
+  }
+
+  useEffect(()=>{
+    tradeDropdownClass()
+  },[])
+
+
+
   // token warning stuff
   const [loadedInputCurrency, loadedOutputCurrency] = [
     useCurrency(loadedUrlParams?.inputCurrencyId),

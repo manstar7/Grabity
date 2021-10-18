@@ -1,7 +1,7 @@
 import { MenuEntry, menuStatus } from '@pancakeswap-libs/uikit'
 
-const baseurl="http://69.164.195.140:8096";
-const swap="http://69.164.195.140:8097";
+const baseurl="http://localhost:3000";
+const swap="http://localhost:3001";
 
 
 const config: MenuEntry[] = [
@@ -11,11 +11,10 @@ const config: MenuEntry[] = [
     calloutClass: 'menulink',
     href: baseurl.concat('/'),
   },
-  
   {
     label: 'Trade',
     icon: 'TradeIcon',
-    calloutClass: 'menulink',
+    calloutClass: 'menulink dropdown tradeDropdown',
     items: [
       {
         label: 'Swap',
@@ -25,12 +24,10 @@ const config: MenuEntry[] = [
       {
         label: 'Liquidity',
         href: swap.concat('/#/pool'),
-    calloutClass: 'menulink',
-
+        calloutClass: 'menulink',
       },
     ],
   },
- 
   {
     label: 'Refinery',
     icon: 'FarmIcon',
@@ -44,17 +41,18 @@ const config: MenuEntry[] = [
     href:  baseurl.concat('/Staking'),
   },
   {
-    label: 'Warp',
-    icon: 'WarpIcon',
-    calloutClass: 'menulink',
-    href:  baseurl.concat('/warp'),
-  },
-  {
     label: 'Stake Swap',
     icon: 'StakeswapIcon',
     calloutClass: 'menulink',
     href:  baseurl.concat('/stakeswap'),
   },
+  {
+    label: 'Warp',
+    icon: 'WarpIcon',
+    calloutClass: 'menulink',
+    href:  baseurl.concat('/warp'),
+  },
+  
   
 ]
 

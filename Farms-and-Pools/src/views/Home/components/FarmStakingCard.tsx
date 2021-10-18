@@ -67,7 +67,7 @@ const FarmedStakingCard = () => {
   }, [onReward])
 
   return (
-    <StyledFarmStakingCard className="mb-10">
+    <StyledFarmStakingCard className="mb-10 card_radius">
       <CardBody>
         <Heading size="xl" mb="24px" className="hvd_comic_serif card_3_tiele" color="text">
           {TranslateString(542, 'Total Value Warped')}

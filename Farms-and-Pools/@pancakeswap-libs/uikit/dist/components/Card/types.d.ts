@@ -11,7 +11,12 @@ export declare type CardTheme = {
     boxShadowActive: string;
     boxShadowSuccess: string;
     boxShadowWarning: string;
-    cardHeaderBackground: string;
+    cardHeaderBackground: {
+        default: string;
+        blue: string;
+        violet: string;
+    };
+    dropShadow: string;
 };
 export interface CardProps extends SpaceProps, HTMLAttributes<HTMLDivElement> {
     isActive?: boolean;

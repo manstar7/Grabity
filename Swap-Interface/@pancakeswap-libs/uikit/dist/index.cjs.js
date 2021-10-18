@@ -3069,8 +3069,8 @@ var MenuEntry = styled__default['default'].div(templateObject_3$2 || (templateOb
     return theme.colors.gradients.bubblegum;
 });
 MenuEntry.defaultProps = {
-    secondary: false,
-    isActive: false,
+    secondary: true,
+    isActive: true,
     role: "button",
 };
 var LinkStatus = styled__default['default'](Text)(templateObject_4$1 || (templateObject_4$1 = __makeTemplateObject(["\n  border-radius: ", ";\n  padding: 0 8px;\n  border: 2px solid;\n  border-color: ", ";\n  box-shadow: none;\n  color: ", ";\n"], ["\n  border-radius: ", ";\n  padding: 0 8px;\n  border: 2px solid;\n  border-color: ", ";\n  box-shadow: none;\n  color: ", ";\n"])), function (_a) {

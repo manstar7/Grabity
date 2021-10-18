@@ -1,4 +1,5 @@
 import React, { useEffect, useCallback, useState } from 'react'
+import styled from 'styled-components'
 import { Route, useRouteMatch } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import BigNumber from 'bignumber.js'
@@ -17,10 +18,32 @@ import FarmCard, { FarmWithStakedValue } from './components/FarmCard/FarmCard'
 import FarmTabButtons from './components/FarmTabButtons'
 import Divider from './components/Divider'
 
+
 export interface FarmsProps{
   tokenMode?: boolean
 }
+const Hero = styled.div`
+  align-items: center;
+  // background-image: url('/images/egg/3.png');
+  background-repeat: no-repeat;
+  background-position: top center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  margin-bottom: 32px;
+  padding-top: 116px;
+  text-align: center;
 
+  ${({ theme }) => theme.mediaQueries.lg} {
+    // background-image: url('/images/home.png'), url('/images/home.png');
+    // background-position: left center, right center;
+    height: 60px;
+    padding-top: 0;
+    text-align:left;
+    align-items:flex-start;
+  }
+`
 const Farms: React.FC<FarmsProps> = (farmsProps) => {
   const { path } = useRouteMatch()
   const TranslateString = useI18n()
@@ -91,18 +114,24 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
 
   return (
     <Page className="px-0">
-       <div className="banner_swap_bg">
-      <Heading as="h1" size="lg" className="h1_big" color="color_blue" mb="20px" style={{ textAlign: 'left' }}>
+    <div className="banner_swap_bg">
+        <Heading as="h1" size="lg" className="h1_big" color="color_blue" mb="20px" style={{ textAlign: 'left' }}>
         {
           tokenMode ?
-            TranslateString(10002, 'Pools')
+            TranslateString(10002, 'Staking')
             :
           TranslateString(320, 'Refinery')
         }
       </Heading>
-     
       <Heading as="h2" color="colrblk" mb="0px" style={{ textAlign: 'left', fontSize:'18px' }}>
-        {TranslateString(10000, 'Stake Liquidity Pool (LP) tokens to earn GBT')}
+        {
+          tokenMode ?
+            TranslateString(10000, 'Stake Liquidity Pool (LP) tokens to earn GBT')
+            :
+          TranslateString(10000, 'Stake LP tokens to earn GBT')
+          
+        }
+        
       </Heading>
       </div>
       <div className="padd_around">

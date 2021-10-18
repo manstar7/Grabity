@@ -2992,12 +2992,12 @@ var links = [
     {
         label: "Swap",
         icon: "SwapIcon",
-        href: "http://localhost:3001/#/swap",
+        href: "http://localhost:3001/",
     },
     {
         label: "Add Pool",
         icon: "AddPoolIcon",
-        href: "http://localhost:3001/#/pool",
+        href: "http://localhost:3001/",
     },
     // {
     //     label: "Trade",
@@ -3218,8 +3218,8 @@ var MenuEntry = styled.div(templateObject_3$2 || (templateObject_3$2 = __makeTem
     return theme.colors.gradients.bubblegum;
 });
 MenuEntry.defaultProps = {
-    secondary: false,
-    isActive: false,
+    secondary: true,
+    isActive: true,
     role: "button",
 };
 var LinkStatus = styled(Text)(templateObject_4$1 || (templateObject_4$1 = __makeTemplateObject(["\n  border-radius: ", ";\n  padding: 0 8px;\n  border: 2px solid;\n  border-color: ", ";\n  box-shadow: none;\n  color: ", ";\n"], ["\n  border-radius: ", ";\n  padding: 0 8px;\n  border: 2px solid;\n  border-color: ", ";\n  box-shadow: none;\n  color: ", ";\n"])), function (_a) {

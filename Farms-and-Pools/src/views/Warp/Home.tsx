@@ -212,7 +212,18 @@ const Home: React.FC = () => {
 
   return (
     <Page className="px-0">
-      
+      <div className="banner_swap_bg">
+      <Heading as="h1" size="lg" className="h1_big" color="color_blue" mb="20px" style={{ textAlign: 'left' }}>
+        {
+          
+          TranslateString(320, 'Warp')
+        }
+      </Heading>
+      <Heading as="h2" color="colrblk" mb="0px" style={{ textAlign: 'left', fontSize:'18px' }}>
+        {TranslateString(10000, 'Stake & burn assets to earn rewards')}
+      </Heading>
+      </div>
+
       <div className="px-left-right">
      
         <div className="stake_row">
@@ -221,20 +232,7 @@ const Home: React.FC = () => {
         <div className="">
     <StyledFarmStakingCard className="white_box">
         <div className="card_pos">
-        <div className="banner_warp_bg">
-      <Heading as="h3" size="lg" className="h1_warp" color="color_blue" mb="20px" style={{ textAlign: 'left' }}>
-        {
-          
-          TranslateString(320, 'Warp')
-        }
-      </Heading>
-     
-      <Heading as="h6" className="war_des" color="colrblk" mb="0px" style={{ textAlign: 'left', fontSize:'14px' }}>
-        {TranslateString(10000, 'Cross-chain bridge for your assets')}
-      </Heading>
-      </div>
-      <Divider />
-      <CardBody className="pt-0">
+      <CardBody className="pt-40">
       <div id="swap-currency-input" className="swap-currency-input">
 <div className="swap-currency-input-div">
 <div className="input-div-new">
@@ -262,7 +260,7 @@ const Home: React.FC = () => {
                   <p className="from_to_color">From</p>
                 <Fromcard>
                   <div className="text-center-img">
-                <Image src='/images/egg/to_coin.png' width={64} height={64} />
+                <Image src='/images/egg/to_coin.png' width={51} height={60} />
                 </div>
                 <p className="from_to_color mt-coin">BEP-20</p>
                 </Fromcard>
@@ -274,7 +272,7 @@ const Home: React.FC = () => {
                   <p className="from_to_color">To</p>
                   <Fromcard>
                   <div className="text-center-img">
-                <Image src='/images/egg/from_coin.png' width={64} height={64} />
+                <Image src='/images/egg/from_coin.png' width={37} height={60} />
                 </div>
                 <p className="from_to_color mt-coin">ERC-20</p>
                 </Fromcard>

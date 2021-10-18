@@ -93,24 +93,15 @@ const DashboardCard = () => {
         </Heading>      */}
       </CardBody>
       <CardFooter>
-      <div className="flex_tot align_center mt-0 flex_sm pos_end">
-        <div>
-        <p className="img_div">
-        <Button as="a" href="https://grabity.org/" variant="secondary" className="btnh_trans">
-        <Image src='/images/egg/globe.png' width={15} height={15} />
-      <span className="coin_name_color">Official Website</span>
-          </Button>
-       
-      </p>
-        </div>
-        <div>
-        <p className="img_div just_end flex_sm">
-        <Button as="a" href="https://bscscan.com/token/0xa4b0574D8634B9514e89174c67400F5F947d1dd1" variant="secondary" className="btnh_trans btn_end">
-      <Image src='/images/egg/scan.png' width={15} height={15} />
-      <span className="sacn_color">BscScan</span>
-      </Button>
-      </p>
-        </div>
+        <div className="sell-footer d-flex justify-content-between align-items-center">
+          <div className="sell-ow">
+            <a href="https://grabity.org/">
+            <img src="/images/egg/world.png" alt=""/>Official Website</a>
+          </div>
+          <div className="sell-bsc">
+            <a href="https://bscscan.com/token/0xa4b0574D8634B9514e89174c67400F5F947d1dd1">
+              <img src="/images/egg/scan.png" alt=""/>BscScan</a>
+          </div>
         </div>
       </CardFooter>
     </StyledTotalValueLockedCard>

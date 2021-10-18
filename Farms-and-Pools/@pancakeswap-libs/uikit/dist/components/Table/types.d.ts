@@ -1,3 +1,4 @@
+/// <reference types="react" />
 export declare type ColumnType<T> = {
     name: string;
     label?: string;
@@ -80,6 +81,7 @@ export interface UseTableOptionsType<T> {
     sortable?: boolean;
     selectable?: boolean;
     pagination?: boolean;
+    sortColumn?: string;
     filter?: (row: RowType<T>[]) => RowType<T>[];
 }
 export interface UseTableReturnType<T> {
@@ -110,7 +112,7 @@ export declare type TableState<T extends DataType> = {
     originalRows: RowType<T>[];
     selectedRows: RowType<T>[];
     filterOn: boolean;
-    sortColumn: string | null;
+    sortColumn: string | null | undefined;
     toggleAllState: boolean;
     pagination: PaginatorType;
     paginationEnabled: boolean;

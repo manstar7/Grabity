@@ -89,41 +89,38 @@ const CakeStats = () => {
           {TranslateString(542, 'Farms & Staking')}
         </Heading>
 
-         <Heading color="card_small" className="card_title" size="md">
-            {TranslateString(544, 'Tokens to Harvest')}:
-          </Heading>
+        
         <Block className="mb-0">
-          <div className="flex_tot flex_to_new align_center mt-0 mb-0">
+          <div className="flex_tot flex_to_new align_center mt-0 mb-26 mainfarmearning">
             <div>
-            <p className="card_sub_text_grey">
-          <Label color="card_small" className="label_color">~${(eggPrice * earningsSum).toFixed(2)}</Label>
-
-          </p>
+              <p className="card_sub_text_grey">
+                 <Heading color="card_small" className="card_title lablefarmstoken" size="md">
+            {TranslateString(544, 'Tokens to Harvest')}
+          </Heading>
+              </p>
             </div>
-            <div className="float_right">
-            <CakeHarvestBalance earningsSum={earningsSum} />
-
+            <div className="farmearning">
+              <CakeHarvestBalance earningsSum={earningsSum} />
+              <Label color="card_small" className="label_color lablefarms">≈${(eggPrice * earningsSum).toFixed(2)}</Label>
             </div>
-           
           </div>
-         
-         
         </Block>
 
-        <Heading color="card_small" className="card_title" size="md">
-            {TranslateString(544, 'Tokens to Supply')}:
-          </Heading>
+        
         <Block className="mb-0">
-          <div className="flex_tot flex_to_new align_center mt-0 mb-0">
+          <div className="flex_tot flex_to_new align_center mb-0 mainfarmearning">
             <div>
             <p className="card_sub_text_grey">
-            <CakeWalletBalance cakeBalance={cakeBalance} />
+            <Heading color="card_small" className="card_title lablefarmstoken" size="md">
+            {TranslateString(544, 'Tokens to Supply')}
+          </Heading>
 
         
           </p>
             </div>
-            <div>
-            <Label className="label_color float_right">~${(eggPrice * cakeBalance).toFixed(2)}</Label>
+            <div className="farmearning">
+            <CakeWalletBalance cakeBalance={cakeBalance} />
+            <Label color="card_small" className="label_color lablefarms">~${(eggPrice * cakeBalance).toFixed(2)}</Label>
         </div>
           </div>
          
@@ -131,7 +128,7 @@ const CakeStats = () => {
         </Block>
 
          <div>
-          <Actions className="actiob_dib_ma">
+          <Actions className="actiob_dib_ma mt-18">
           {account ? (
             <Button className="btn_yellow"
               id="harvest-all"

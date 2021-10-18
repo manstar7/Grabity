@@ -1,4 +1,4 @@
-import React, { useContext, useMemo } from 'react'
+import React, { useContext, useEffect, useMemo } from 'react'
 import { ThemeContext } from 'styled-components'
 import { Pair } from '@pancakeswap-libs/sdk'
 import { Button, CardBody, Text, Heading } from '@pancakeswap-libs/uikit'
@@ -21,6 +21,41 @@ import PageHeader from 'components/PageHeader'
 import AppBody from '../AppBody'
 
 export default function Pool() {
+
+  const tradeDropdownClass = () => {
+    
+    const dropdownDiv = document.getElementsByClassName('tradeDropdown')
+    const dropdownEleParent = dropdownDiv[0].parentNode;
+    const subMenu = dropdownEleParent?.children[1]
+
+    const menuItems = subMenu?.children;
+    
+    if(menuItems) {
+      for(let i=0;i < menuItems?.length;i++) {
+        const aHref = menuItems[i].children;
+        const url = aHref[0].getAttribute('href');
+
+        if(url?.includes('#/pool')) {
+          menuItems[i].classList.remove('gbUOUm');
+          menuItems[i].classList.add('epsdBM');
+        } else {
+          menuItems[i].classList.remove('epsdBM');
+          menuItems[i].classList.add('gbUOUm');
+        }        
+      }
+    }
+    
+    if(subMenu?.classList.contains('ikHqXF')) {
+      const dropdown: HTMLElement = dropdownDiv[0] as HTMLElement;
+      dropdown.click();
+    }
+  }
+
+  useEffect(()=>{
+    tradeDropdownClass()
+  },[])
+
+
   const theme = useContext(ThemeContext)
   const { account } = useActiveWeb3React()
   const TranslateString = useI18n()

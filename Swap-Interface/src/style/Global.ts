@@ -14,7 +14,7 @@ const GlobalStyle = createGlobalStyle`
   src: url(./fonts/Sofia_Pro_Semi_Bold.otf);
 }
 * {
-  font-family: Sofia_Pro_Regular;
+  font-family: Poppins;
 }
   body {
     background-color: ${({ theme }) => theme.colors.background};
@@ -141,8 +141,8 @@ div[role="button"] a {
 }
 .menulink img
 {
-  max-width:18px !important;
-  min-width:18px !important;
+  max-width:40px !important;
+  min-width:40px !important;
 }
 .menulink svg
 {
@@ -418,12 +418,14 @@ a svg[fill="none"]
 
 body
 {
-  background-image: url('/images/bg.png');
+  //background-image: url('/images/bg.png');
   background-position: bottom;
   background-repeat:no-repeat;
   background-attachment:fixed;
   background-size:cover;
   // background-size:100% 400px;
+  background-color: black;
+    background-image: unset;
 }
 #warp-page button[title="Settings"],
 #warp-page button[title="Recent transactions"]

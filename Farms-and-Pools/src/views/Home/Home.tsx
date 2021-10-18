@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { Heading, Text, BaseLayout } from '@pancakeswap-libs/uikit'
 import useI18n from 'hooks/useI18n'
 import Page from 'components/layout/Page'
+import Container from 'components/layout/Container'
 import DashboardCard from 'views/Home/components/DashboardCard'
 import TotalValueLockedCard from 'views/Home/components/TotalValueLockedCard'
 import EarnAPYCard from 'views/Home/components/EarnAPYCard'
@@ -71,40 +72,40 @@ const Home: React.FC = () => {
   const TranslateString = useI18n()
 
   return (
-    <Page className="home_bg">
-      <Hero>
-        <Heading as="h1" mb="20px" color="primaryblack" className="hvd_comic_serif orange_head" style={{ fontSize: "2.5rem" }}>
+    <Page className="px-0">
+      <div className="banner_swap_bg">
+      <Heading as="h1" mb="20px" color="primaryblack" className="hvd_comic_serif orange_head" style={{ fontSize: "2.5rem" }}>
           Dashboard
         </Heading>
-        {/* <Heading as="h3" className="dash_heading_sm_1" color="dash_heading">The #1 AMM and yield farm on Binance Smart Chain.</Heading> */}
-        {/* <Heading as="h3" className="dash_heading_1" color="dash_heading">$1,422,681,659.00</Heading>
-        <Text className="dash_subheading" color="secondary">{TranslateString(578, 'Total Value Locked (TVL) Across All LPs and Pool')}</Text> */}
-      </Hero>
-      <div className="homw_full_sec">
-       
-        <Cards>
-          <div>
-          <DashboardCard />
-        </div>
-        <div>
-        <TotalValueLockedCard />
-
-          
-          </div>
-        </Cards>
-        <Cards>
-          <div>
-          <CakeStats />
-
-          </div>
-          <div>
-          <FarmStakingCard />
-
-<EarnAPYCard /> 
-          </div>
-            
-        </Cards>
       </div>
+
+      <Container>
+          <div className="homw_full_sec">
+           
+            <Cards>
+              <div>
+              <DashboardCard />
+            </div>
+            <div>
+            <TotalValueLockedCard />
+
+              
+              </div>
+            </Cards>
+            <Cards>
+              <div>
+              <CakeStats />
+
+              </div>
+              <div>
+              <FarmStakingCard />
+
+              <EarnAPYCard /> 
+              </div>
+                
+            </Cards>
+          </div>
+      </Container>
     </Page>
   )
 }

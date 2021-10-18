@@ -31,13 +31,13 @@ const EarnAPYCard = () => {
   }
 
   return (
-    <StyledFarmStakingCard className="white_box card_heigh_fifty">
+    <StyledFarmStakingCard className="white_box card_heigh_fifty card_radius">
       <CardBody>
         <Text color="textSubtle" className="card_3_tiele mb-emsi">
           Current Emissions
         </Text>
         {/* <Text color="card_small" style={{ fontWeight: 600, fontSize: "16px" }}>{TranslateString(540, 'New Supply/block')}</Text> */}
-          <Text bold fontSize="16px" color="contrast">{eggPerBlock} GBT / Block</Text>
+          <Text bold fontSize="25px" color="contrast" className='mb-35'>{eggPerBlock} GBT <span className='emissionsgrayblock'>/ Block </span></Text>
         {/* <CardMidContent color="secondary" className="hvd_comic_serif">
           
           <Heading color="textblack" className="hvd_comic_serif text_big_val" size="xl">413.43% APR</Heading>

@@ -147,8 +147,15 @@ const Home: React.FC = () => {
      
       <Heading as="h2" color="colrblk" mb="0px" style={{ textAlign: 'left', fontSize:'18px' }}>
         {TranslateString(10000, 'Stake & burn assets to earn rewards')}
+        <div className="simptip-position-right" data-tooltip="By staking your assets in StakeSwap Pools, you understand and agree that 100% of your deposited assets will be burned to earn the reward tokens over the remaining duration of the pool.">
+          <img src="/images/tooltip.png" alt=""/>
+        </div>
       </Heading>
+      
+
       </div>
+
+       
       <div className="px-left-right">
         {/* <CardsLarge>
           <VisionCard />
